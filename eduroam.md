@@ -5,6 +5,8 @@ aliases: []
 tags: []
 ---
 
+{% include "head.njk" %}
+
 # how do i connect to eduroam on \<distro\>?
 
 **⚠️ disclaimer: ⚠️ this is (predominately) a guide for a tool not written/managed by the linux society. please use your own best judgement when using third party tools which handle your unsw credentials. you use third party tools at your own risk and we are not responsible for any damage arising from your use of them.**
@@ -55,9 +57,9 @@ you are missing either chromedriver or geckodriver. install this via your distro
 
 please note that the below is a temporary solution which may stop working at any time.
 
-```
+```sh
  nmcli connection edit
- type wifi in to make a new wifi connection
+ # type wifi in to make a new wifi connection
     
     set connection.id yourConnectionName
     
@@ -77,10 +79,9 @@ please note that the below is a temporary solution which may stop working at any
 
     activate
 
-    quit (if you want to leave)
+    quit # if you want to leave
 
-
-(note: password is like written in plaintext so dont show anyone :3)
+# (note: password is like written in plaintext so dont show anyone :3)
 
 ```
 
