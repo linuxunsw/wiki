@@ -3,9 +3,8 @@ id: eduroam
 title: "how do i connect to eduroam?"
 aliases: []
 tags: []
+layout: base.njk
 ---
-
-{% include "head.njk" %}
 
 # how do i connect to eduroam on \<distro\>?
 

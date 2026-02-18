@@ -1,8 +1,7 @@
 ---
 title: linux society wiki
+layout: base.njk
 ---
-
-{% include "head.njk" %}
 
 # linux society wiki
 
