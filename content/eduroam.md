@@ -10,37 +10,38 @@ layout: base.njk
 
 *(Want to connect to UNSW-IoT instead? See [/iot](/iot))*
 
-**⚠️ disclaimer: ⚠️ this is (predominately) a guide for a tool not written/managed by the linux society. please use your own best judgement when using third party tools which handle your unsw credentials. you use third party tools at your own risk and we are not responsible for any damage arising from your use of them.**
+> [!WARNING]
+> This is (predominately) a guide for a tool not written/managed by the Linux Society. Please use your own best judgement when using third party tools which handle your UNSW credentials. You use third party tools at your own risk and we are not responsible for any damage arising from your use of them.
 
-**tldr: try [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All)**
+**TLDR: try [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All)**
 
-eduroam at unsw is an aruba-managed wireless network, meaning that it only officially supports ubuntu. if you are looking to connect on a distro other than ubuntu, an option is [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All).
-by doing so, you will get higher speeds compared to using unsw-iot :)
+Eduroam at UNSW is an Aruba-managed wireless network, meaning that it only officially supports Ubuntu. If you are looking to connect on a distro other than Ubuntu, an option is [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All).
+By doing so, you (may) get higher speeds compared to using UNSW-IoT :)
 
-all the following steps assume you have cloned the repo already (see steps on github).
+All the following steps assume you have cloned the repo already (see steps on Github).
 
-## running with geckodriver (firefox):
+## Running with Geckodriver (Firefox):
 
-geckodriver seems to work better than chromedriver. install it via your distro's package manager.
+Geckodriver seems to work better than Chromedriver. Install it via your distro's package manager, or find it [here](https://github.com/mozilla/geckodriver/releases).
 
 ```sh
 pip install .
 aqc4all --browser firefox
 ```
 
-## what is the 'onboarding portal url'
+## What is the 'onboarding portal URL'?
 
-1. go here: [unsw get online](https://www.unsw.edu.au/myit/services/wifi-network/connecting-to-the-unsw-network/get-online/standard-unsw-linux-device)
-2. click get online
-3. accept the terms and conditions
-4. select 'personal device'
-5. the onboarding portal link is the page's domain
+1. Go here: [UNSW Get Online](https://www.unsw.edu.au/myit/services/wifi-network/connecting-to-the-unsw-network/get-online/standard-unsw-linux-device)
+2. Click 'Get Online'
+3. Accept the terms and conditions
+4. Select 'personal device'
+5. The onboarding portal link is the page's domain
 
-an example is if we have a site such as https://linsoc.cc/join, the domain part you would provide would be https://linsoc.cc.
+An example is if we have a site such as https://linsoc.cc/join, the domain part you would provide would be https://linsoc.cc.
 
-## 'this environment is externally managed' when i run `pip install`
+## 'This environment is externally managed' when I run `pip install`
 
-create a virtual environment first/use uv.
+Create a virtual environment first/use `uv`.
 
 ```sh
 python -m venv venv
@@ -48,15 +49,16 @@ source venv/bin/activate
 pip install .
 ```
 
-if you have uv, just run `uv run aqc4all`
+if you have `uv`, just run `uv run aqc4all`
 
-## 'none not found' when i run the program
+## ‘None not found’ when I run the `acq4all`
 
-you are missing either chromedriver or geckodriver. install this via your distro's package manager. if you choose geckodriver, make sure you use the `--browser firefox` flag.
+You are missing either Chromedriver or Geckodriver. Install this via your distro's package manager. If you choose Geckodriver, make sure you use the `--browser firefox` flag.
 
-## i don't want to use aqc4all!
+## I don't want to use `aqc4all`!
 
-please note that the below is a temporary solution which may stop working at any time.
+>[!WARNING]
+> Please note that the below is a temporary solution which may stop working at any time. The following also **stores your UNSW password in plaintext.**
 
 ```sh
  nmcli connection edit
@@ -82,10 +84,8 @@ please note that the below is a temporary solution which may stop working at any
 
     quit # if you want to leave
 
-# (note: password is like written in plaintext so dont show anyone :3)
-
 ```
 
-## have an issue not found here?
+## Have an issue not found here?
 
-find us in the [linux society discord](https://linsoc.cc/discord) and we can help with troubleshooting :) this guide is also a work in progress! please give us feedback <3
+Find us in the [Linux Society Discord](https://linsoc.cc/discord) and we can help with troubleshooting :) This guide is also a work in progress! Please give us feedback <3

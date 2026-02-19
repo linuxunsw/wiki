@@ -1,5 +1,6 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import footnote_plugin from "markdown-it-footnote";
+import MarkdownItGitHubAlerts from "markdown-it-github-alerts";
 import { IdAttributePlugin } from "@11ty/eleventy";
 import { execSync } from "child_process";
 
@@ -10,7 +11,10 @@ export default function(eleventyConfig) {
   eleventyConfig.setInputDirectory("content");
   eleventyConfig.addPassthroughCopy("assets");
 
-  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(footnote_plugin));
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    mdLib.use(footnote_plugin)
+    mdLib.use(MarkdownItGitHubAlerts)
+  });
   eleventyConfig.addShortcode("lastEdited", findLastEdited);
 }
 

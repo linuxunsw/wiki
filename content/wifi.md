@@ -61,7 +61,8 @@ an IoT device.
 
 ### Legacy Eduroam
 
-**⚠️ warning: ⚠️ this connection method has known security issues**
+>[!WARNING]
+> This connection method has known security issues.
 
 _Read the [full section](/eduroam#i-dont-want-to-use-aqc4all)_
 

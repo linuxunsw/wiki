@@ -177,3 +177,59 @@ img {
     height: auto;
     display: block;
 }
+
+/* github callout */
+.markdown-alert {
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid;
+  background-color: #1f1f1f;
+}
+
+.markdown-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.markdown-alert > :first-child {
+  margin-top: 0;
+}
+
+.markdown-alert > :last-child {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-alert-title svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: #ffffff;
+}
+
+.markdown-alert-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.markdown-alert-warning {
+  border-left: 4px solid;
+    border-color: #fbc630;
+    background-color: #fbc63016
+}
+
+.markdown-alert-warning .markdown-alert-title svg {
+    fill: #fbc630;
+}
+
+/* these variants can be added as needed */
+/*
+.markdown-alert-tip {
+}
+
+.markdown-alert-important {
+}
+
+.markdown-alert-caution {
+}
+*/
