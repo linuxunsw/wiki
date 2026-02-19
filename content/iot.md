@@ -5,13 +5,14 @@ aliases: []
 tags: []
 authors:
   - l1mey112
+  - isobelmcrae
 layout: base.njk
 ---
 
 *(Want to connect to eduroam instead? See [/eduroam](/eduroam))*
 
-Take it from me you do NOT want to use Eduroam for certain reasons (for example, not wanting to use `aqc4all` or storing your password in plaintext). In my experience using IoT has given me zero issues, it's just as fast and doesn't get in your way. The only issue is that in certain locations (~3 locations out of 10000000000s) like Keith Burrows the reception is slightly patchy.
-
+If you don't want to use eduroam, UNSW-IoT is another option. You may want to do this if you are not interested in `aqc4all`, or don't want to use the deprecated method of connecting to eduroam.
+The only issue is that you may have patchy reception in some buildings (e.g. Keith Burrows). 
 ![Connction to UNSW-IoT on i3status bar](/assets/UNSW-IoT-connection.png)
 
 The way UNSW-IoT works is that you put down your MAC address in an online portal and they provide you a password to connect with. **This will not work with setups and operating systems that randomise your MAC address (iOS, Mac), but Linux has nothing so this is unlikely.**
@@ -51,8 +52,6 @@ See the bottom of the document at [#acquire-your-macv4-address](#acquire-your-ma
 
 
 ## Acquire your MACv4 address
-
-**Disclaimer. There is probably a much easier way to do this with NetworkManager, Gnome, KDE have their own facilities but I don't use those.**
 
 ### Use ip addr or /proc
 
