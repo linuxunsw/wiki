@@ -1,6 +1,6 @@
 ---
 id: eduroam
-title: "how do i connect to eduroam on <distro>?"
+title: "how do i connect to eduroam on $distro?"
 aliases: []
 tags: []
 authors:
@@ -14,7 +14,7 @@ layout: base.njk
 
 **tldr: try [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All)**
 
-eduroam at unsw is an aruba-managed wireless network, meaning that it only officially supports ubuntu. if you are looking to connect on a distro other than ubuntu, an option is [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All). 
+eduroam at unsw is an aruba-managed wireless network, meaning that it only officially supports ubuntu. if you are looking to connect on a distro other than ubuntu, an option is [arubaquickconnect4all](https://github.com/alzer89/ArubaQuickConnect4All).
 by doing so, you will get higher speeds compared to using unsw-iot :)
 
 all the following steps assume you have cloned the repo already (see steps on github).
@@ -61,9 +61,9 @@ please note that the below is a temporary solution which may stop working at any
 ```sh
  nmcli connection edit
  # type wifi in to make a new wifi connection
-    
+
     set connection.id yourConnectionName
-    
+
     set wifi.ssid eduroam
 
     set 802-1x.eap peap

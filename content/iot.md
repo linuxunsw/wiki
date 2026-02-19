@@ -13,19 +13,11 @@ layout: base.njk
 
 If you don't want to use eduroam, UNSW-IoT is another option. You may want to do this if you are not interested in `aqc4all`, or don't want to use the deprecated method of connecting to eduroam.
 
-The issues with iot that you may have patchy reception in some buildings (e.g. Keith Burrows), and that iot isn't officially supported for personal devices. 
+The issues with iot that you may have patchy reception in some buildings (e.g. Keith Burrows), and that iot isn't officially supported for personal devices.
 
 ![Connction to UNSW-IoT on i3status bar](/assets/UNSW-IoT-connection.png)
 
 The way UNSW-IoT works is that you put down your MAC address in an online portal and they provide you a password to connect with. **This will not work with setups and operating systems that randomise your MAC address, so ensure you disable these settings :)**
-
-<div>
-
----
-
----
-
-</div>
 
 See the bottom of the document at [#acquire-your-macv4-address](#acquire-your-macv4-address) to get your MACv4 address, it should look like the string `XX:XX:XX:XX:XX:XX` where each `XX` are hex bytes.
 
@@ -38,19 +30,6 @@ See the bottom of the document at [#acquire-your-macv4-address](#acquire-your-ma
 4. **Connect to UNSW-IoT using the password they provide to you**, like `iwctl station wlan0 connect UNSW-IoT` or `nmcli device wifi connect UNSW-IoT password <password>`.
 
 ![Create new UNSW-IoT device portal](/assets/UNSW-IoT-create-new-device.png)
-
-
-
-
-<div>
-
----
-
----
-
-
-</div>
-
 
 ## Acquire your MACv4 address
 
@@ -69,7 +48,7 @@ and extract out the `XX:XX:XX:XX:XX:XX` for the thing that isn't the loopback, s
 Otherwise, you can use proc filesystem
 
 ```sh
-cat /sys/class/net/wlan0/address 
+cat /sys/class/net/wlan0/address
 # XX:XX:XX:XX:XX:XX
 ```
 
@@ -81,9 +60,10 @@ cat /sys/class/net/wlan0/address
 iwctl station wlan0 show
 #
 #            ....
-#            Connected network     ???                                         
-#            IPv4 address          ??.??.??.??                                     
+#            Connected network     ???
+#            IPv4 address          ??.??.??.??
 #            ConnectedBss          XX:XX:XX:XX:XX:XX
-#            .... 
-#            .... 
-#            .... 
+#            ....
+#            ....
+#            ....
+```
