@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preload" as="text" type="text/css" crossorigin
+    href="https://api.fontshare.com/v2/css?f[]=satoshi&display=swap" />
+  <link rel="preload" as="text" type="text/css" crossorigin
+    href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk&display=swap" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+  <link rel="stylesheet" href="https://unpkg.com/automad-prism-themes@0.3.7/dist/prism-automad-dark.css">
+</head>
+<body>
+  <div class="page">
+    {{ content | safe }}
+
+    {% if authors and authors.length %}
+    <div class="meta">
+      <div class="meta__row">
+        <div class="meta__author">
+          <a href="https://github.com/{{ authors[0] }}"><img class="meta__avatar" src="https://github.com/{{ authors[0] }}.png?size=64" alt="" width="32" height="32"></a>
+          <span>authored by <a href="https://github.com/{{ authors[0] }}">{{ authors[0] }}</a></span>
+        </div>
+
+        {% set editorCount = authors.length - 1 %}
+        {% if editorCount > 0 %}
+          {% set condensed = editorCount > 2 %}
+          <div class="meta__editors">
+            <span class="meta__editors-label">edited by</span>
+            <div class="meta__people">
+              {% for person in authors %}
+                {% if loop.index0 > 0 %}
+                  {% if condensed %}
+                    <a class="meta__person meta__person--condensed" href="https://github.com/{{ person }}" aria-label="{{ person }}" title="{{ person }}">
+                      <img class="meta__avatar" src="https://github.com/{{ person }}.png?size=64" alt="{{ person }}" width="32" height="32">
+                    </a>
+                  {% else %}
+                    <a class="meta__person" href="https://github.com/{{ person }}">
+                      <img class="meta__avatar" src="https://github.com/{{ person }}.png?size=64" alt="" width="32" height="32">
+                      <span>{{ person }}</span>
+                    </a>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      {% set editDate %}{% lastEdited %}{% endset %}
+      {% if editDate %}
+        <div class="meta__date">last edited {{ editDate }}</div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
