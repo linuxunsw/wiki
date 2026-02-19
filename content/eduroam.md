@@ -3,6 +3,8 @@ id: eduroam
 title: "how do i connect to eduroam?"
 aliases: []
 tags: []
+authors:
+  - isobelmcrae
 layout: base.njk
 ---
 

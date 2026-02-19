@@ -10,7 +10,7 @@ body{
     padding: 2.5rem 1.75rem;
 }
 
-header{
+header:not(.meta){
     outline: 2px solid #ddd;
     outline-offset: 1rem;
 }
@@ -64,6 +64,106 @@ dt:target{
     margin: 0.8rem -0.2rem 0 -0.2rem;
     outline: 2px solid rgba(125,125,125, 0.75);
 }
+
+/* article metadata */
+
+.page{
+    display: flex;
+    flex-direction: column;
+}
+
+.page > h1{
+    order: -2;
+}
+
+.page > .meta{
+    order: -1;
+}
+
+.meta{
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.meta__row{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.meta__date{
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.meta a{
+    color: #fbc630;
+    text-decoration: none;
+}
+
+.meta a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.meta__avatar{
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: #222;
+}
+
+.meta__author{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta__editors{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.meta__editors::before{
+    content: "·";
+    color: #aaa;
+}
+
+.meta__editors-label{
+    white-space: nowrap;
+}
+
+.meta__people{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.meta__person{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.meta__person--condensed{
+    display: inline-block;
+    line-height: 0;
+    transition: opacity 0.15s;
+}
+
+.meta__person--condensed:hover{
+    opacity: 0.8;
+}
+
+
 
 
 
