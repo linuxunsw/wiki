@@ -12,7 +12,7 @@ layout: base.njk
 *(Want to connect to eduroam instead? See [/eduroam](/eduroam))*
 
 If you don't want to use eduroam, UNSW-IoT is another option. You may want to do this if you are not interested in `aqc4all`, or don't want to use the deprecated method of connecting to eduroam.
-The only issue is that you may have patchy reception in some buildings (e.g. Keith Burrows). 
+The issues with iot that you may have patchy reception in some buildings (e.g. Keith Burrows), and that iot isn't officially supported for personal devices. 
 ![Connction to UNSW-IoT on i3status bar](/assets/UNSW-IoT-connection.png)
 
 The way UNSW-IoT works is that you put down your MAC address in an online portal and they provide you a password to connect with. **This will not work with setups and operating systems that randomise your MAC address (iOS, Mac), but Linux has nothing so this is unlikely.**
