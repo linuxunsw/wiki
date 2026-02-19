@@ -8,6 +8,11 @@ authors:
 layout: base.njk
 ---
 
+(Want to connect to eduroam instead? See [/eduroam](/eduroam))
+
+## How do I connect to UNSW-IoT on anything?
+
+
 Take it from me you do NOT want to use Eduroam if you want to get (probably) MITMed. In my experience using IoT has given me zero issues, it's just as fast and doesn't get in your way. The only issue is that in certain locations (~3 locations out of 10000000000s) like Keith Burrows the reception is slightly patchy.
 
 ![Connction to UNSW-IoT on i3status bar](/assets/UNSW-IoT-connection.png)
