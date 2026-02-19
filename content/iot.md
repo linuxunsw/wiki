@@ -10,7 +10,7 @@ layout: base.njk
 
 *(Want to connect to eduroam instead? See [/eduroam](/eduroam))*
 
-Take it from me you do NOT want to use Eduroam for certain reasons. In my experience using IoT has given me zero issues, it's just as fast and doesn't get in your way. The only issue is that in certain locations (~3 locations out of 10000000000s) like Keith Burrows the reception is slightly patchy.
+Take it from me you do NOT want to use Eduroam for certain reasons (for example, not wanting to use `aqc4all` or storing your password in plaintext). In my experience using IoT has given me zero issues, it's just as fast and doesn't get in your way. The only issue is that in certain locations (~3 locations out of 10000000000s) like Keith Burrows the reception is slightly patchy.
 
 ![Connction to UNSW-IoT on i3status bar](/assets/UNSW-IoT-connection.png)
 
