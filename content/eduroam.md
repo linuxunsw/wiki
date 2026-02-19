@@ -1,14 +1,12 @@
 ---
 id: eduroam
-title: "how do i connect to eduroam?"
+title: "how do i connect to eduroam on <distro>?"
 aliases: []
 tags: []
 authors:
   - isobelmcrae
 layout: base.njk
 ---
-
-# how do i connect to eduroam on \<distro\>?
 
 **⚠️ disclaimer: ⚠️ this is (predominately) a guide for a tool not written/managed by the linux society. please use your own best judgement when using third party tools which handle your unsw credentials. you use third party tools at your own risk and we are not responsible for any damage arising from your use of them.**
 
