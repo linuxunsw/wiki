@@ -1,6 +1,6 @@
 ---
 id: eduroam
-title: "how do i connect to eduroam?"
+title: "how do i connect to eduroam on <distro>?"
 aliases: []
 tags: []
 authors:

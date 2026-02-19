@@ -1,8 +1,8 @@
-body{
+body {
     color: #ddd;
     background-color: #0d0d0d;
     font-size: 18px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: "Satoshi", sans-serif;
     font-weight: 400;
     line-height: 1.5;
     max-width: 55ch;
@@ -10,77 +10,85 @@ body{
     padding: 2.5rem 1.75rem;
 }
 
-header:not(.meta){
+header:not(.meta) {
     outline: 2px solid #ddd;
     outline-offset: 1rem;
 }
 
-h1,h2,h3,h4,h5,h6{
-    line-height: 1.2; 
-    font-family: 'Cabinet Grotesk', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-family: "Cabinet Grotesk", sans-serif;
     font-weight: 900;
     color: #ddd;
 }
 
-h1{
+h1 {
     font-size: 2.45rem;
 }
 
-code, pre{
-    font-family: 'Fira Code', monospace;
+code,
+pre {
+    font-family: "Fira Code", monospace;
 }
 
-a{
-    color:#fbc630;
+a {
+    color: #fbc630;
     text-decoration-thickness: 2px;
 }
 
-a:focus{
+a:focus {
     outline: 0.2rem solid #fed;
     outline-offset: 0.4rem;
 }
 
-p{
+p {
     margin-bottom: 2rem;
 }
 
-section, aside, footer{
+section,
+aside,
+footer {
     margin: 2.5rem auto;
 }
 
-ul{
+ul {
     margin-top: -1.25rem;
     margin-bottom: 2.25rem;
 }
 
-dt{
+dt {
     font-weight: 700;
-    margin-top: 1rem; 
+    margin-top: 1rem;
 }
 
-dt:target{
-    background-color: rgba(200,195,190,0.35);
+dt:target {
+    background-color: rgba(200, 195, 190, 0.35);
     padding: 0.2rem;
     margin: 0.8rem -0.2rem 0 -0.2rem;
-    outline: 2px solid rgba(125,125,125, 0.75);
+    outline: 2px solid rgba(125, 125, 125, 0.75);
 }
 
 /* article metadata */
 
-.page{
+.page {
     display: flex;
     flex-direction: column;
 }
 
-.page > h1{
+.page > h1 {
     order: -2;
 }
 
-.page > .meta{
+.page > .meta {
     order: -1;
 }
 
-.meta{
+.meta {
     margin-top: -0.5rem;
     margin-bottom: 2rem;
     display: flex;
@@ -90,76 +98,76 @@ dt:target{
     color: #aaa;
 }
 
-.meta__row{
+.meta__row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-.meta__date{
+.meta__date {
     font-size: 0.85rem;
     color: #aaa;
 }
 
-.meta a{
+.meta a {
     color: #fbc630;
     text-decoration: none;
 }
 
-.meta a:hover{
+.meta a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
 
-.meta__avatar{
+.meta__avatar {
     border-radius: 50%;
     vertical-align: middle;
     background-color: #222;
 }
 
-.meta__author{
+.meta__author {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.meta__editors{
+.meta__editors {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-.meta__editors::before{
+.meta__editors::before {
     content: "·";
     color: #aaa;
 }
 
-.meta__editors-label{
+.meta__editors-label {
     white-space: nowrap;
 }
 
-.meta__people{
+.meta__people {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-.meta__person{
+.meta__person {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
 }
 
-.meta__person--condensed{
+.meta__person--condensed {
     display: inline-block;
     line-height: 0;
     transition: opacity 0.15s;
 }
 
-.meta__person--condensed:hover{
+.meta__person--condensed:hover {
     opacity: 0.8;
 }
 

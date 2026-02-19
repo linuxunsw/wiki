@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
-  
+
   <link rel="stylesheet" href="/style/style.css">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preload" as="text" type="text/css" crossorigin
@@ -20,8 +20,7 @@
 </head>
 <body>
   <div class="page">
-    {{ content | safe }}
-
+  <h1>{{ title }}</h1>
     {% if authors and authors.length %}
     <div class="meta">
       <div class="meta__row">
@@ -61,6 +60,8 @@
       {% endif %}
     </div>
     {% endif %}
+
+    {{ content | safe }}
   </div>
 </body>
 </html>
