@@ -1,10 +1,13 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { IdAttributePlugin } from "@11ty/eleventy";
 import { execSync } from "child_process";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style");
   eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(IdAttributePlugin);
   eleventyConfig.setInputDirectory("content");
+  eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addShortcode("lastEdited", findLastEdited);
 }

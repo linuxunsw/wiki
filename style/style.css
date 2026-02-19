@@ -170,3 +170,10 @@ dt:target {
 .meta__person--condensed:hover {
     opacity: 0.8;
 }
+
+/* I guess bro. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
