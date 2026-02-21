@@ -27,7 +27,7 @@ See the bottom of the document at [#acquire-your-macv4-address](#acquire-your-ma
 
 3. Type in your MAC address, click create, and you're done!
 
-4. **Connect to UNSW-IoT using the password they provide to you**, like `iwctl station wlan0 connect UNSW-IoT` or `nmcli device wifi connect UNSW-IoT password <password>`.
+4. **Connect to UNSW-IoT using the password they provide to you**, like `iwctl station wlan0 connect UNSW-IoT` or `nmcli device wifi --ask connect UNSW-IoT`.
 
 ![Create new UNSW-IoT device portal](/assets/UNSW-IoT-create-new-device.png)
 
