@@ -35,7 +35,7 @@ smart way, however ethernet simply performs exponential backoff. If two
 computers try to send at the same time, the cables are electrically connected,
 so they can detect that. All they do then is wait a bit of time and try again.
 
-# Connecting Two Computers
+## Connecting Two Computers
 
 Most Linux based systems will have the [ip(8)] utility. `ip` is a low level
 utility used for managing network devices, interfaces and tunnels. It allows us
@@ -117,7 +117,7 @@ ping 10.0.0.2
 ssh 10.0.0.2
 ```
 
-# Transferring Data
+## Transferring Data
 
 This of course doesn't sound very useful by itself. What you can do with this
 however is transfer arbitrary data. The obvious way here is using ssh, which of
