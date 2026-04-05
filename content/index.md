@@ -8,3 +8,4 @@ this is a work in progress, see below:
 - [general WiFi guide](/wifi/)
 - [eduroam guide](/eduroam/)
 - [UNSW-IoT guide](/iot/)
+- [Tiny Networks with Ethernet](/tiny_ethernet/)
