@@ -180,16 +180,12 @@ img {
 
 /* github callout */
 .markdown-alert {
+  --alert-color: #ddd;
+  --alert-bg: #1f1f1f;
   padding: 0.8rem 1rem;
   margin: 1rem 0;
-  border-left: 4px solid;
-  background-color: #1f1f1f;
-}
-
-.markdown-alert-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  border-left: 4px solid var(--alert-color);
+  background-color: var(--alert-bg);
 }
 
 .markdown-alert > :first-child {
@@ -200,36 +196,42 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.markdown-alert-title svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  fill: #ffffff;
-}
-
 .markdown-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-.markdown-alert-warning {
-  border-left: 4px solid;
-    border-color: #fbc630;
-    background-color: #fbc63016
+.markdown-alert-title svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: var(--alert-color);
 }
 
-.markdown-alert-warning .markdown-alert-title svg {
-    fill: #fbc630;
+.markdown-alert-note {
+  --alert-color: #58a6ff;
+  --alert-bg: #58a6ff16;
 }
 
-/* these variants can be added as needed */
-/*
 .markdown-alert-tip {
+  --alert-color: #3fb950;
+  --alert-bg: #3fb95016;
 }
 
 .markdown-alert-important {
+  --alert-color: #a371f7;
+  --alert-bg: #a371f716;
+}
+
+.markdown-alert-warning {
+  --alert-color: #fbc630;
+  --alert-bg: #fbc63016;
 }
 
 .markdown-alert-caution {
+  --alert-color: #f85149;
+  --alert-bg: #f8514916;
 }
-*/
