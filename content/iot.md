@@ -1,6 +1,6 @@
 ---
 id: iot
-title: "how do i connect to UNSW-IoT?"
+title: "How do I connect to UNSW-IoT?"
 aliases: []
 tags: []
 authors:
