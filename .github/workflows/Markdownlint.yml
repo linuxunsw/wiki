@@ -1,21 +1,20 @@
 ---
 name: Markdownlint
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
+ 
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v7.0.1
 
       - name: Markdownlint
-        uses: reviewdog/action-markdownlint@3667398db9118d7e78f7a63d10e26ce454ba5f58 # v0.26.2
+        uses: reviewdog/action-markdownlint@v0.31.0
         with:
           fail_level: any
-          markdownlint_flags: '-s .mdl_style.rb'
+          markdownlint_flags: '-c .markdownlint.yaml content'
+          filter_mode: nofilter
           reporter: github-pr-review

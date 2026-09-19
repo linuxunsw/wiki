@@ -1,0 +1,11 @@
+default: true
+MD029:
+  style: ordered
+
+MD002: false # This conflicts with the way we generate HTML from markdown.
+MD013: false # Line length limits hold you back.
+MD026: false # Trailing punctuation in headers can be grammatically useful.
+MD032: false # This conflicts with the way we generate HTML from markdown if we have multiple authors.
+MD034: false # Sometimes a bare URL is exactly what you want.
+MD036: false # We purposefully use emphases instead of headers sometimes.
+MD041: false # This conflicts with the way we generate HTML from markdown.
