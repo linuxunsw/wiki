@@ -1,5 +1,5 @@
 ---
-title: linux society wiki
+title: Linux Society Wiki
 layout: base.njk
 ---
 
